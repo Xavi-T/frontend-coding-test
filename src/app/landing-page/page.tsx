@@ -1,3 +1,10 @@
+import '@/styles/mainPage.scss';
+import Header from './components/Header';
+
 export default function LandingPage() {
-    return <div className="main">Task 1</div>;
+    return (
+        <div>
+            <Header />
+        </div>
+    );
 }

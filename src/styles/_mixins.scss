@@ -1,0 +1,27 @@
+// _mixins.scss
+@mixin flex-center($direction: row, $gap: 0) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: center;
+    justify-content: center;
+    gap: $gap;
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == md {
+        @media (max-width: 768px) {
+            @content;
+        }
+    } @else if $breakpoint == lg {
+        @media (max-width: 1024px) {
+            @content;
+        }
+    }
+}
+
+@mixin flex($align: center, $justify: flex-start, $gap: 0) {
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    gap: $gap;
+}
