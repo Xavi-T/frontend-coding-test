@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function CTA() {
     return (
-        <div className="banner-container">
+        <section className="banner-container">
             <div className="cta">
                 <div className="cta-overlay">
                     <div>
@@ -24,6 +24,6 @@ export default function CTA() {
                     />
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
