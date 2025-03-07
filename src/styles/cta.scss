@@ -1,0 +1,64 @@
+@import 'variables';
+.banner-container {
+    .cta {
+        position: relative;
+        width: 100%;
+        height: 645px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        .cta-overlay {
+            margin-left: 20%;
+            position: absolute;
+            z-index: 2;
+            text-align: center;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .img-container {
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .btn-apply {
+            padding: 16px 40px;
+
+            @include responsive(md) {
+                padding: 16px 32px;
+            }
+        }
+    }
+
+    // Responsive mobile
+    @include responsive(md) {
+        padding: 8px 16px;
+        height: 400px;
+
+        .cta {
+            height: 100%;
+            flex-direction: column;
+            gap: 20px;
+            border-radius: 10px;
+
+            .cta-overlay {
+                margin-left: 45%;
+                padding: 0 16px;
+                gap: 10px;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 20%;
+        }
+    }
+}
