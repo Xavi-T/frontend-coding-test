@@ -86,6 +86,8 @@
         display: none;
     }
     @include responsive(sm) {
+        padding: 40px 0;
+
         .btn-view-all-mobile {
             display: block;
             cursor: pointer;

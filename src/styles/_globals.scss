@@ -89,7 +89,7 @@ body {
     margin: 0;
 
     @include responsive(md) {
-        font-size: 20px;
+        font-size: 24px;
     }
 }
 
@@ -103,5 +103,13 @@ body {
 
     @include responsive(md) {
         font-size: 12px;
+    }
+}
+
+.btn-apply {
+    padding: 16px 40px;
+
+    @include responsive(md) {
+        padding: 16px 32px;
     }
 }
