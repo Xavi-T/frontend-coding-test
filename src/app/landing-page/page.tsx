@@ -5,6 +5,7 @@ import OurModels from './components/OurModels';
 import OurStory from './components/OurStory';
 import WhyChooseUs from './components/WhyChooseUs';
 import Looking from './components/Looking';
+import Information from './components/Information';
 
 export default function LandingPage() {
     return (
@@ -15,6 +16,7 @@ export default function LandingPage() {
             <OurStory />
             <WhyChooseUs />
             <Looking />
+            <Information />
             <div style={{ height: 300 }}></div>
         </div>
     );
