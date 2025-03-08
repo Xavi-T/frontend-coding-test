@@ -1,6 +1,29 @@
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
 import Image from 'next/image';
 
 export default function CTA() {
+    useEffect(() => {
+        gsap.from('.cta-overlay', {
+            duration: 1,
+            y: 100,
+            opacity: 0,
+            ease: 'power3.out',
+        });
+        gsap.from('.heading-text', {
+            duration: 1,
+            x: -100,
+            opacity: 0,
+            stagger: 0.2,
+        });
+        gsap.from('.heading-description', {
+            duration: 1,
+            x: 100,
+            opacity: 0,
+            delay: 0.5,
+        });
+    }, []);
+
     return (
         <section className="banner-container">
             <div className="cta">

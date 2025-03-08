@@ -1,8 +1,22 @@
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Footer() {
+    useEffect(() => {
+        gsap.from('.footer-left', {
+            duration: 1,
+            x: -50,
+            opacity: 0,
+            ease: 'power3.out',
+        });
+    }, []);
+
     return (
         <div className="container-footer">
             <footer className="footer">

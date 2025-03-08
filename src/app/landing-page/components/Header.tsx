@@ -1,8 +1,25 @@
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
 import { ArrowLeft, ChevronDown, Menu } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Header() {
+    useEffect(() => {
+        gsap.from('.header', {
+            duration: 1,
+            y: -100,
+            opacity: 0,
+            ease: 'bounce',
+        });
+        gsap.from('.nav-item', {
+            duration: 1,
+            x: -100,
+            opacity: 0,
+            stagger: 0.2,
+        });
+    }, []);
+
     return (
         <div className="container">
             <header className="header">

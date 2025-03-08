@@ -1,5 +1,10 @@
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const models = [
     {
@@ -61,6 +66,29 @@ const models = [
 ];
 
 export default function OurModels() {
+    useEffect(() => {
+        gsap.from('.our-models-header', {
+            duration: 1,
+            y: -50,
+            opacity: 0,
+            ease: 'power3.out',
+        });
+
+        gsap.from('.model-card', {
+            scrollTrigger: {
+                trigger: '.model-card',
+                start: 'top 80%',
+                end: 'bottom 60%',
+                toggleActions: 'play none none none',
+            },
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            stagger: 0.2,
+            ease: 'power3.out',
+        });
+    }, []);
+
     return (
         <section className="container">
             <div className="our-models">

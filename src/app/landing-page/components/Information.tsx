@@ -1,8 +1,43 @@
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Information() {
+    useEffect(() => {
+        gsap.from('.info-column', {
+            scrollTrigger: {
+                trigger: '.info-column',
+                start: 'top 80%',
+                end: 'bottom 60%',
+                toggleActions: 'play none none none',
+            },
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            stagger: 0.2,
+            ease: 'power3.out',
+        });
+
+        gsap.from('.social-icon', {
+            scrollTrigger: {
+                trigger: '.social-icon',
+                start: 'top 80%',
+                end: 'bottom 60%',
+                toggleActions: 'play none none none',
+            },
+            duration: 1,
+            scale: 0.8,
+            opacity: 0,
+            stagger: 0.2,
+            ease: 'power3.out',
+        });
+    }, []);
+
     return (
         <section className="container-information">
             <div className="information">

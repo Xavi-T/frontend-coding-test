@@ -1,6 +1,59 @@
+import { useEffect } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 
+gsap.registerPlugin(ScrollTrigger);
+
 export default function OurStory() {
+    useEffect(() => {
+        gsap.from('.story-content', {
+            duration: 1,
+            x: -100,
+            opacity: 0,
+            ease: 'power3.out',
+        });
+
+        gsap.from('.story-image-container', {
+            scrollTrigger: {
+                trigger: '.story-image-container',
+                start: 'top 80%',
+                end: 'bottom 60%',
+                toggleActions: 'play none none none',
+            },
+            duration: 1,
+            x: 100,
+            opacity: 0,
+            ease: 'power3.out',
+        });
+
+        gsap.from('.story-overlay', {
+            scrollTrigger: {
+                trigger: '.story-overlay',
+                start: 'top 80%',
+                end: 'bottom 60%',
+                toggleActions: 'play none none none',
+            },
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: 'power3.out',
+        });
+
+        gsap.from('.box-apply-mobile', {
+            scrollTrigger: {
+                trigger: '.box-apply-mobile',
+                start: 'top 80%',
+                end: 'bottom 60%',
+                toggleActions: 'play none none none',
+            },
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: 'power3.out',
+        });
+    }, []);
+
     return (
         <section className="container">
             <div className="our-story">

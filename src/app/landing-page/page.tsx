@@ -1,3 +1,4 @@
+'use client';
 import '@/styles/mainPage.scss';
 import Header from './components/Header';
 import CTA from './components/CTA';
