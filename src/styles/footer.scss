@@ -1,0 +1,45 @@
+@import 'variables';
+
+.container-footer {
+    margin: auto auto;
+    padding: 0 16px;
+    @include flex-center(column, 20px);
+    background-color: $background-btn-secondary;
+    border-top: 1px solid #e5e7eb;
+}
+.footer {
+    max-width: $container-width;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: $text-color;
+
+    .footer-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .footer-icon {
+            font-size: 16px;
+        }
+    }
+
+    .footer-right {
+        .nav {
+            border-radius: 8px;
+            padding: 4px 8px;
+            border: 1px solid $text-color;
+            .dropdown-container .dropdown {
+                right: 0;
+                top: unset;
+                bottom: 120%;
+            }
+        }
+    }
+
+    @include responsive(md) {
+        display: none;
+    }
+}

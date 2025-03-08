@@ -6,6 +6,7 @@ import OurStory from './components/OurStory';
 import WhyChooseUs from './components/WhyChooseUs';
 import Looking from './components/Looking';
 import Information from './components/Information';
+import Footer from './components/Footer';
 
 export default function LandingPage() {
     return (
@@ -17,7 +18,7 @@ export default function LandingPage() {
             <WhyChooseUs />
             <Looking />
             <Information />
-            <div style={{ height: 300 }}></div>
+            <Footer />
         </div>
     );
 }
