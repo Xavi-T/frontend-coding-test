@@ -28,7 +28,7 @@ export default function OurStory() {
                         className="story-bg"
                     />
                     <div className="story-overlay">
-                        <p className="story-text">Uliana's Story</p>
+                        <p className="story-text">Uliana&apos;s Story</p>
                         <h2 className="story-title">
                             From Local to International
                         </h2>
