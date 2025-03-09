@@ -12,11 +12,11 @@ export default function Information() {
         gsap.from('.info-column', {
             scrollTrigger: {
                 trigger: '.info-column',
-                start: 'top 80%',
+                start: 'top 100%',
                 end: 'bottom 60%',
                 toggleActions: 'play none none none',
             },
-            duration: 1,
+            duration: 0.5,
             y: 50,
             opacity: 0,
             stagger: 0.2,
